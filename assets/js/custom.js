@@ -22,6 +22,24 @@
 	  }
 	})
 
+	$('.owl-banner').owlCarousel({
+	  center: true,
+      items:1,
+      loop:true,
+      nav: true,
+	  dots:true,
+	  navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+      margin:30,
+      responsive:{
+        992:{
+            items:1
+        },
+		1200:{
+			items:1
+		}
+      }
+	});
+
 	var width = $(window).width();
 		$(window).resize(function() {
 		if (width > 767 && $(window).width() < 767) {
@@ -32,11 +50,11 @@
 		}
 	})
 
-	const elem = document.querySelector('.trending-box');
-	const filtersElem = document.querySelector('.trending-filter');
+	const elem = document.querySelector('.properties-box');
+	const filtersElem = document.querySelector('.properties-filter');
 	if (elem) {
 		const rdn_events_list = new Isotope(elem, {
-			itemSelector: '.trending-items',
+			itemSelector: '.properties-items',
 			layoutMode: 'masonry'
 		});
 		if (filtersElem) {
